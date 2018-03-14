@@ -21,7 +21,7 @@ public class teleOpTemplate extends LinearOpMode {
 
     @Override
     public void runOpMode(){
-        //all code for during initialization here
+        //all code for hardware identification and commands for during initialization here
 
         motorName = hardwareMap.dcMotor.get("motor name");
         servoName = hardwareMap.servo.get("servo name");
@@ -29,7 +29,7 @@ public class teleOpTemplate extends LinearOpMode {
         motorName.setDirection(DcMotorSimple.Direction.REVERSE);
         motorName.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-        //all code after the start is pressed after this term
+        //all code after this command runs after start is pressed
         waitForStart();
 
         while (opModeIsActive()){
